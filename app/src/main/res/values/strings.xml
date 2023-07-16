@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="favourites">Favourites</string>
+    <string name="Playlist">Playlist</string>
+    <string name="total_songs">Total Songs</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="feedback">Feedback</string>
+    <string name="setting">Setting</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="enjoy_the_best_music">Enjoy the Best Music</string>
+    <string name="title">Exit</string>
+    <string name="remove_title">Remove Playlist</string>
+    <string name="supporting_text">Are you sure,You want to exit?</string>
+    <string name="remove_Song">Are you sure,You want to remove Playlist?</string>
+    <string name="decline">No</string>
+    <string name="accept">Yes</string>
+    <string name="mint_15">15 Minutes</string>
+    <string name="mint_30">30 Minutes</string>
+    <string name="mint_60">60 Minutes</string>
+    <string name="search_view">Search View</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="favo_song">Favo Song</string>
+    <string name="your_name">Your Name</string>
+    <string name="add_songs">Add</string>
+    <string name="remove_all">Remove All</string>
+    <string name="suggestion">Suggestion:</string>
+    <string name="enter_your_suggestion">Enter your suggestion</string>
+    <string name="email">Email:</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="feedback_message">Feedback Message:</string>
+    <string name="enter_your_feedback_message">Enter your feedback message</string>
+    <string name="submit">Submit</string>
+    <string name="set_theme">Set Theme</string>
+    <string name="sort_text">Sort\n\n</string>
+    <string name="version">Version Name</string>
+    <string name="song_name">Song Name</string>
+    <string name="_00_00">00:00</string>
+    <string name="song_here">Song Here</string>
+    <string name="album_name">Album Name</string>
+    <string name="music_name">Music Name</string>
+    <string name="world_of_music">World of Music</string>
+
+</resources>

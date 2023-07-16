@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaylistDetails">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/AppColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnPDBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/tvPlaylistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/Playlist"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPDBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnPDBack" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/playlistDetailImg"
+    android:layout_width="250dp"
+    android:layout_height="180dp"
+    app:srcCompat="@drawable/music_icon"
+    app:tint="?attr/AppColor"
+    app:layout_constraintTop_toBottomOf="@id/constraintLayout2"
+    app:layout_constraintStart_toStartOf="parent"
+/>
+<TextView
+    android:id="@+id/tvMoreInfo"
+    android:layout_width="0dp"
+    android:layout_height="180dp"
+    android:text="@string/Playlist"
+    android:textColor="@color/black"
+    android:gravity="center|start"
+    android:textSize="16sp"
+
+    app:layout_constraintStart_toEndOf="@id/playlistDetailImg"
+    app:layout_constraintTop_toBottomOf="@id/constraintLayout2"
+    app:layout_constraintEnd_toEndOf="parent"
+    />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playListDetailRV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingBottom="40dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playlistDetailImg"
+        app:layout_constraintBottom_toTopOf="@id/btnRemovePLBtn"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btnPLShuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="?attr/AppColor"
+        app:icon="@drawable/ic_baseline_shuffle_24"
+        app:iconSize="40dp"
+        app:iconTint="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/btnRemovePLBtn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/addPLBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:drawableLeft="@drawable/add_playlist"
+        android:text="@string/add_songs"
+        android:backgroundTint="?attr/AppColor"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRemovePLBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="?attr/AppColor"
+        android:drawableLeft="@drawable/remove_playlist"
+        android:text="@string/remove_all"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

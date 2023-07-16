@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity">
+
+    <ImageView
+        android:id="@+id/btnBackArrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/back_arrow"
+        app:tint="?attr/AppColor"
+        app:layout_constraintEnd_toStartOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/world_of_music"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnFavouritePA"
+        app:layout_constraintStart_toEndOf="@+id/btnBackArrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnFavouritePA"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/red" />
+
+    <ImageView
+        android:id="@+id/songImage"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/music_image_bg"
+        android:src="@drawable/music_icon"
+        app:tint="?attr/AppColor"
+        app:layout_constraintBottom_toTopOf="@+id/songName"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/songName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/song_name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/playPauseSong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/preSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:backgroundTint="?attr/AppColor"
+        app:icon="@drawable/back_arrow"
+        app:iconSize="30dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toStartOf="@+id/playPauseSong"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/playPauseSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="?attr/AppColor"
+        app:icon="@drawable/play_icon"
+        app:iconSize="30dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/preSong"
+        app:layout_constraintEnd_toStartOf="@+id/nextSong"
+        app:layout_constraintStart_toEndOf="@+id/preSong"
+        app:layout_constraintTop_toTopOf="@+id/preSong" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/nextSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="?attr/AppColor"
+        app:icon="@drawable/farwards"
+        app:iconSize="30dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/playPauseSong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playPauseSong"
+        app:layout_constraintTop_toTopOf="@+id/playPauseSong" />
+
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/_00_00"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnRepeat" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:thumbTint="?attr/AppColor"
+        android:progressTint="?attr/AppColor"
+        app:layout_constraintStart_toEndOf="@id/startTime"
+        app:layout_constraintBottom_toBottomOf="@id/startTime"
+        app:layout_constraintTop_toTopOf="@id/startTime"
+        app:layout_constraintEnd_toStartOf="@+id/endTime" />
+
+    <TextView
+        android:id="@+id/endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/_00_00"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnShare"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnRepeat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/loop"
+        app:tint="?attr/AppColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnEqulizer"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnEqulizer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/equlizer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnTimer"
+        app:tint="?attr/AppColor"
+        app:layout_constraintStart_toEndOf="@+id/btnRepeat" />
+
+    <ImageView
+        android:id="@+id/btnTimer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_baseline_timer_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnShare"
+        app:tint="?attr/AppColor"
+        app:layout_constraintStart_toEndOf="@+id/btnEqulizer" />
+
+    <ImageView
+        android:id="@+id/btnShare"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_baseline_share_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="?attr/AppColor"
+        app:layout_constraintStart_toEndOf="@+id/btnTimer" />
+</androidx.constraintlayout.widget.ConstraintLayout>

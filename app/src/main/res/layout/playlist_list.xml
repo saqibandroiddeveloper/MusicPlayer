@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="15dp"
+    app:strokeColor="?attr/AppColor"
+    app:strokeWidth="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playlistCardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/playlistImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/music_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/AppColor" />
+
+        <TextView
+            android:id="@+id/playListName"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/favo_song"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playlistImage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPLDelete"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_baseline_delete_24"
+            app:layout_constraintBottom_toBottomOf="@+id/playListName"
+            app:layout_constraintStart_toEndOf="@+id/playListName"
+            app:layout_constraintTop_toTopOf="@+id/playListName"
+            app:tint="?attr/AppColor"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

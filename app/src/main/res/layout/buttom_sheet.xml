@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:id="@+id/mint_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        app:tint="?attr/AppColor"
+        app:layout_constraintBottom_toTopOf="@+id/mint_30"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_timer_24"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/mint_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        app:tint="?attr/AppColor"
+        app:layout_constraintBottom_toTopOf="@+id/mint_60"
+        app:layout_constraintTop_toBottomOf="@+id/mint_15"
+        app:srcCompat="@drawable/ic_baseline_timer_24"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/mint_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mint_30"
+        app:srcCompat="@drawable/ic_baseline_timer_24"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv15Mint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/mint_15"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tv30Mint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mint_15"/>
+
+    <TextView
+        android:id="@+id/tv30Mint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/mint_30"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tv60Mint"
+        app:layout_constraintTop_toBottomOf="@+id/tv15Mint"
+        app:layout_constraintStart_toEndOf="@id/mint_30" />
+
+    <TextView
+        android:id="@+id/tv60Mint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/mint_60"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv30Mint"
+        app:layout_constraintStart_toEndOf="@id/mint_60" />
+</androidx.constraintlayout.widget.ConstraintLayout>
